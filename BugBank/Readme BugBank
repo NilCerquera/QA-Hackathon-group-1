@@ -1,0 +1,16 @@
+QA testing app Bug Bank
+
+En este aplicación realizaremos el analisis funcional de un software en linea para realizar transferencias bancarias,
+Iniciaremos con la pagina URL para validar los requisitos suministrados por la APP, no contamos con documentación para
+las pruebas pero nos guiaremos con los pre-requisitos de la aplicación
+
+Por otra parte, nos indica que la App no cuenta con base de datos, realizaremos pruebas en el front para garantizar la
+funcionalidad y benecifios a los clientes
+
+Iniciaremos con la descomposición del formulario para validar que caracteres esta admitiendo y manipulando el usuario,
+Posterior vamos a generar las listas de comprobación y casos de prueba para confirmar la funcionalidad de la aplicación.
+
+Finalmente validaremos las fallas o Bugs encontrados y brindar soporte y que aspectos podemos garantizar para que la
+aplicación sea óptima y práctica para el usuario
+
+Realizaremos las pruebas automatizadas para la creación del usuario e inicio de sesión correspondiente
