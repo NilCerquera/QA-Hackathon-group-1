@@ -24,12 +24,11 @@ class TestQA:
     def test_create_user(self):
         self.driver.get(Data.bug_bank_url)
         routes_page = QABugBank(self.driver)
-        self.driver.implicitly_wait(3)
-        routes_page.click_sign_up()
         self.driver.implicitly_wait(5)
-        routes_page.set_name()
+        routes_page.click_sign_up()
+        self.driver.implicitly_wait(10)
         routes_page.set_email()
-        routes_page.set_new_password()
+        self.driver.implicitly_wait(5)
         time.sleep(10)
 
     @classmethod
