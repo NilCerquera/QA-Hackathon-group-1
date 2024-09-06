@@ -1,1 +1,1 @@
-![Mapa mental de proyecto](https://drive.google.com/file/d/1fsSq6PeB1tLSC_A1xOPRO1UAVr1e92UF/view?usp=sharing)
+![Mapa mental de los proyectos](https://github.com/user-attachments/assets/e87a22f7-af69-4e89-b65e-828160ddc056)
