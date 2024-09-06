@@ -26,8 +26,8 @@ class TestQA:
         routes_page = QABugBank(self.driver)
         self.driver.implicitly_wait(5)
         routes_page.click_sign_up()
-        self.driver.implicitly_wait(10)
-        routes_page.set_email()
+        routes_page.set_name()
+        routes_page.set_confirmation()
         self.driver.implicitly_wait(5)
         time.sleep(10)
 

@@ -1,5 +1,5 @@
 bug_bank_url = 'https://bugbank.netlify.app/'
 email = 'prueba@gmail.com'
 name = 'Pedro Perez'
-password_client = 'Ab123#'
-confirm_password = 'Ab123#'
+password_client = 'Ab123'
+confirm_password = 'Ab123'
