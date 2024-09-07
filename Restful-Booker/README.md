@@ -1,33 +1,29 @@
-Prueba Exploratoria de la API Restful-Booker
-Descripción
-Este proyecto fue realizado con el objetivo de interactuar con la plataforma de reservas de hotel mediante la API Restful-Booker, enfocándonos en la búsqueda de fallos críticos en su funcionamiento, principalmente errores relacionados con la validación de campos. Se realizó una prueba exploratoria basada en el enfoque de caja negra, sin conocer el código fuente del backend.
+# Pruebas Exploratorias en API Restful-Booker
 
-Las pruebas se ejecutaron utilizando la herramienta Postman para hacer solicitudes a la API, basándonos en la documentación disponible en APIDOC. Además, se utilizó Google Spreadsheet para la creación de la lista de comprobación, clases de equivalencia y casos de prueba, Xmind para elaborar un mapa mental de la estructura de pruebas, y JIRA para el reporte de bugs.
+Este proyecto tiene como objetivo interactuar con la plataforma **Restful-Booker** para la gestión de reservas de hotel, con un enfoque principal en la búsqueda de fallos críticos relacionados con la validación de campos y el correcto funcionamiento de los endpoints.
 
-Tecnologías Utilizadas
-Postman para realizar y gestionar las pruebas de API.
-Google Spreadsheet para la creación de listas de verificación y documentación de casos de prueba.
-JIRA para el seguimiento y reporte de los bugs encontrados.
-Xmind para la creación de mapas mentales que ayudaron a la estructuración de las pruebas.
-Objetivo del Proyecto
-El objetivo principal fue interactuar con la plataforma de reservas de hotel, buscando activamente fallos críticos en la API, evaluando los campos de validación y el correcto comportamiento de los endpoints. Nos enfocamos en simular diferentes escenarios de uso para comprobar la robustez de la API, tales como la gestión de reservas y la autenticación.
+## Descripción del Proyecto
+Realizamos una **prueba exploratoria** basada en la metodología de **caja negra**, sin acceso al código fuente, simulando diversos escenarios y evaluando la robustez de la API. Nos enfocamos en validar aspectos clave como la creación y actualización de reservas, así como la autenticación de usuarios.
 
+## Tecnologías Utilizadas
+- **Postman**: Para realizar y gestionar las solicitudes a la API.
+- **Google Spreadsheet**: Creación de listas de verificación, clases de equivalencia y casos de prueba.
+- **JIRA**: Seguimiento y reporte de bugs.
+- **Xmind**: Estructuración de pruebas mediante mapas mentales.
 
-Importa la colección de pruebas de Postman incluida en el repositorio para empezar a realizar las solicitudes a la API.
+## Objetivo
+Identificar errores críticos y evaluar la validez de los datos a través de los diferentes endpoints de la API. Nos centramos en la validación de campos y en asegurar el cumplimiento de los tiempos de respuesta.
 
-Asegúrate de contar con acceso a la API siguiendo la documentación oficial:
-Restful-Booker API Documentation
+## Cómo Ejecutar las Pruebas
+1. Importa la colección de pruebas de **Postman** disponible en este repositorio.
+2. Ejecuta las solicitudes a través de **Postman** utilizando los endpoints proporcionados en la [documentación de Restful-Booker](https://restful-booker.herokuapp.com/apidoc/index.html).
+3. Verifica que los resultados cumplan con los requisitos de validación y reporta cualquier error en **JIRA**.
 
-Cómo realizar las pruebas
-Ejecuta las solicitudes a través de Postman utilizando los endpoints documentados en la API.
-Verifica los resultados para asegurarte de que los datos enviados cumplen con los requisitos de validación establecidos.
-Reporta cualquier fallo encontrado en JIRA y sigue los casos de prueba documentados en Google Spreadsheet.
-Equipo
-Este proyecto fue llevado a cabo por el equipo de QA Engineers:
-
-Juan Pablo Silva Martínez - QA Engineer
-Mario Guillermo Pastrana Gómez - QA Engineer
-Jorge Michell Guerrero Herrera - QA Engineer
-Jahaziel Kolansinsky - QA Engineer
-Nilton Fdo. Cerquera - QA Engineer
-Jeisson Steve Ortiz Peñaloza - QA Engineer
+## Equipo de Trabajo
+Este proyecto fue desarrollado por un equipo de QA Engineers comprometidos con la calidad del software:
+- **Juan Pablo Silva Martínez**
+- **Mario Guillermo Pastrana Gómez**
+- **Jorge Michell Guerrero Herrera**
+- **Jahaziel Kolansinsky**
+- **Nilton Fdo. Cerquera**
+- **Jeisson Steve Ortiz Peñaloza**
