@@ -28,3 +28,7 @@ Este proyecto fue desarrollado por un equipo de QA Engineers comprometidos con l
 - **Jahaziel Kolansinsky**
 - **Nilton Fdo. Cerquera**
 - **Jeisson Steve Ortiz Peñaloza**
+
+**Fallas criticas de la aplicación**
+
+
