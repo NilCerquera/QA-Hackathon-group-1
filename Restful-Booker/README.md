@@ -27,3 +27,6 @@ Este proyecto fue desarrollado por un equipo de QA Engineers comprometidos con l
 - **Jahaziel Kolansinsky**
 - **Nilton Fdo. Cerquera**
 - **Jeisson Steve Ortiz Peñaloza**
+
+Enlaces a google sheet:
+https://docs.google.com/spreadsheets/d/1quT-ry4zPVoKTqokgymHHoU06_K6mR7Ra-Yd6Y2oMfE/edit?gid=1372149052#gid=1372149052
