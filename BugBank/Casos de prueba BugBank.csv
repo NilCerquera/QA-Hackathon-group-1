@@ -1,0 +1,78 @@
+"Casos de prueba y pruebas: la lógica del botón ""registro""",,,,,,,,,
+,,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Estado,Enlace al informe de errores,Entorno
+p-1,Comprobación de la lógica del botón de crear un usuario al rellenar todos los campos obligatorios correctamente del formulario de registro.,"Ingresar a la URL https://bugbank.netlify.app/
+ Presionas el botón Registro",1,Ingresas el email prueba@gmail.com,La cuenta xxx-x se ha creado con éxito,Firefox 1920*1080,APROBADO,,Google chrome Versión 127.0.6533.100 (Build oficial) (64 bits)
+,,,2,Ingresar el nombre Prueba,,,,,
+,,,3,"Ingresas contraseña y confrimació contraseña 1234, seleccionas crear cuenta con saldo",,,,,
+,,,4,Presionas el botón cadastrar,,,,,
+p-2,Comprobación de la lógica del botón de crear un usuario al rellenar todos los campos obligatorios inccorrectamente del formulario de registro.,"Ingresar a la URL https://bugbank.netlify.app/
+ Presionas el botón Registro",1,Ingresas el email prueba.com,,Firefox 1920*1080,APROBADO,,Google chrome Versión 127.0.6533.100 (Build oficial) (64 bits)
+,,,2,Ingresar el nombre Prueba,,,,,
+,,,3,"Ingresas contraseña y confrimació contraseña 1234, seleccionas crear cuenta con saldo",,,,,
+,,,4,Presionas el botón cadastrar,,,,,
+,,,,,,,,,
+p-3,"Comprobar que luego de crear una cuenta, se vuelva a crear la misma cuenta, no permite su creación","Ingresar a la URL https://bugbank.netlify.app/
+ Presionas el botón Registro, vuelves a diligenciar los datos",1,Ingresas el email prueba@gmail.com,La cuenta no se ha creado con éxito,Firefox 1920*1080,NO APROBADO,https://jpsm87.atlassian.net/browse/BUGB-3,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Ingresar el nombre Prueba,,,,,
+,,,3,"Ingresas contraseña y confrimació contraseña 1234, seleccionas crear cuenta con saldo",,,,,
+,,,4,Presionas el botón cadastrar,,,,,
+,,,5,"Vuelves a ingresar los datos, presionas de nuevo el botón cadrastrar",,,,,
+p-4,Comprueba el inicio de sesión con los datos correctamente,Ingresar a la URL https://bugbank.netlify.app/,1,Ingresas el email prueba@gmail.com,Te muestra el inicio de sesión correctamente,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Ingresas la contraseña 1234,,,,,
+,,,3,Presionas el botón Accesar,,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-5,Comprueba el inicio de sesión con datos incorrectamente,Ingresar a la URL https://bugbank.netlify.app/,1,Ingresas el email prueba.com,No te permite ingresar correctamente a la cuenta,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Ingresas la contraseña 1234,,,,,
+,,,3,Presionas el botón Accesar,,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-6,Comprueba realizar una transferencia de dinero con exito,"Ingresar a la URL https://bugbank.netlify.app/
+ 
+ Inicias sesión correctamente
+ Oprimes el botón transferencia",1,Inicias sesión correctamente,Te muestra que la transferencia fue realizado exitosamente,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Presionas el botón transferencia,,,,,
+,,,3,"Diligencias la cuenta válida 
+ Valor 500
+ Descripción pagos",,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-7,Comprueba realizar una transferencia de dinero de la misma cuenta,"Ingresar a la URL https://bugbank.netlify.app/
+ 
+ Inicias sesión correctamente
+ Oprimes el botón transferencia",1,Inicias sesión correctamente,Te muestra que la transferencia no fue exitosa porque No puedes transferir a la misma cuenta.,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Presionas el botón transferencia,,,,,
+,,,3,"Diligencias la cuenta válida 809-7
+ Valor 500
+ Descripción pagos",,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-8,Comprueba realizar una transferencia de dinero de una cuenta no existente,"Ingresar a la URL https://bugbank.netlify.app/
+ 
+ Inicias sesión correctamente
+ Oprimes el botón transferencia",1,Inicias sesión correctamente,Te muestra que la transferencia no fue exitosa porque la cuenta no es valida,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Presionas el botón transferencia,,,,,
+,,,3,"Diligencias la cuenta válida 1000-70
+ Valor 500
+ Descripción pagos",,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-9,Comprueba realizar una transferencia de dinero de una cuenta con un pago mayor de la cuenta,"Ingresar a la URL https://bugbank.netlify.app/
+ 
+ Inicias sesión correctamente
+ Oprimes el botón transferencia",1,Inicias sesión correctamente,Te muestra que la transferencia no fue exitosa porque la cuenta no es valida,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Presionas el botón transferencia,,,,,
+,,,3,"Diligencias la cuenta válida 809-7
+ Valor 2000
+ Descripción pagos",,,,,
+,,,4,,,,,,
+,,,,,,,,,
+p-10,Comprueba que se registra la transferencia en la opción extracto posterior a realizar una transferencia de dinero exitosamente,"Ingresar a la URL https://bugbank.netlify.app/
+ 
+ Inicias sesión correctamente
+ Oprimes el botón transferencia
+ Realizas la transferencia",1,Realizas la transferencia correctamente,Te muestra los movimientos realizados desde la creación de la cuenta,Firefox 1920*1080,APROBADO,,Google chrome Versión 122.0.6261.129 (Build oficial) (64 bits)
+,,,2,Vas a la pagina principal,,,,,
+,,,3,Oprimes el botón EXTRATO,,,,,
+,,,4,,,,,,
