@@ -21,6 +21,17 @@ class QABugBank:
     submit_login = (By.XPATH, "/html/body/div/div/div[2]/div/div[1]/form/div[3]/button[1]")
     confirm_email_login = (By.XPATH, "/html/body/div/div/div[2]/div/div[1]/form/div[1]/input")
     confirm_password_login = (By.XPATH, "/html/body/div/div/div[2]/div/div[1]/form/div[2]/div/input")
+    click_button_transfer = (By.ID, "btn-TRANSFERÊNCIA")
+    input_number_account = (By.XPATH, "/html/body/div/div/div[3]/form/div[1]/div[1]/input")
+    confirm_account_number = (By.XPATH, "//input[@name='accountNumber']")
+    input_digit = (By.XPATH, "/html/body/div/div/div[3]/form/div[1]/div[2]/input")
+    confirm_code_number = (By.XPATH, "/html/body/div/div/div[3]/form/div[1]/div[2]/input")
+    input_money = (By.XPATH, "/html/body/div/div/div[3]/form/div[2]/input")
+    confirm_money_quantity = (By.XPATH, "/html/body/div/div/div[3]/form/div[2]/input")
+    comment_description = (By.XPATH, "/html/body/div/div/div[3]/form/div[3]/input")
+    confirm_description = (By.XPATH, "/html/body/div/div/div[3]/form/div[3]/input")
+    press_transfer = (By.XPATH, "/html/body/div/div/div[3]/form/button")
+    return_button_transfer = (By.XPATH, "/html/body/div/div/div[2]/div/a")
     def __init__(self, driver):
         self.driver = driver
 
@@ -79,3 +90,36 @@ class QABugBank:
         return confirmation_password_login
     def click_login(self):
         self.driver.find_element(*self.submit_login).click()
+
+    def click_transfer(self):
+        self.driver.find_element(*self.click_button_transfer).click()
+
+    def set_account_number(self):
+        self.driver.find_element(*self.input_number_account).send_keys(Data.account_number)
+
+    def get_account_number(self):
+        account_number_confirm = self.driver.find_element(*self.confirm_account_number).get_property('value')
+        return account_number_confirm
+    def set_digit_number(self):
+        self.driver.find_element(*self.input_digit).send_keys(Data.digit)
+
+    def get_digit_code_number(self):
+        account_code_number_confirm = self.driver.find_element(*self.confirm_code_number).get_property('value')
+        return account_code_number_confirm
+    def set_money_quantity(self):
+        self.driver.find_element(*self.input_money).send_keys(Data.money)
+
+    def get_quantity_of_money(self):
+        quantify_money = self.driver.find_element(*self.confirm_money_quantity).get_property('value')
+        return quantify_money
+    def set_description(self):
+        self.driver.find_element(*self.comment_description).send_keys(Data.description)
+
+    def get_description_comments(self):
+        quantify_money = self.driver.find_element(*self.confirm_description).get_property('value')
+        return quantify_money
+    def confirm_transfer(self):
+        self.driver.find_element(*self.press_transfer).click()
+
+    def return_transfer(self):
+        self.driver.find_element(*self.return_button_transfer).click()

@@ -3,3 +3,7 @@ email = "prueba@gmail.com"
 name = "Pedro Perez"
 password_client = "Ab123"
 confirm_password = "Ab123"
+account_number = ''
+digit = ''
+money = '500'
+description = ''
