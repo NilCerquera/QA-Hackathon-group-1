@@ -48,9 +48,9 @@ Verificar los resultados cumplan con los requisitos de validación y a pesar de 
 ## Equipo de Trabajo
 Este proyecto fue desarrollado por un equipo de QA Engineers comprometidos con la calidad del software y meticulosos en la validación de la aplicación:
 
-Juan Pablo Silva Martínez
-Mario Guillermo Pastrana Gómez
-Jorge Michell Guerrero Herrera
-Jahaziel Kolansinsky
-Nilton Fdo. Cerquera
-Jeisson Steve Ortiz Peñaloza
+- Juan Pablo Silva Martínez
+- Mario Guillermo Pastrana Gómez
+- Jorge Michell Guerrero Herrera
+- Jahaziel Kolansinsky
+- Nilton Fdo. Cerquera
+- Jeisson Steve Ortiz Peñaloza
