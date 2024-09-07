@@ -1,0 +1,49 @@
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Captura de pantalla (si es necesario),Resultado,Enlace al informe de errores
+RB-1,No se puede crear una reservación enviando demasiados caracteres en el campo nombre.,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+
+{
+    ""firstname"" : ""Joooooooooooose"",
+    ""lastname"" : ""Brown"",
+    ""totalprice"" : 111,
+    ""depositpaid"" : true,
+    ""bookingdates"" : {
+        ""checkin"" : ""2018-01-01"",
+        ""checkout"" : ""2019-01-01""
+    },
+    ""additionalneeds"" : ""Breakfast""
+}
+- Enviar la solicitud",No se puede crear una reservación,,,200 se hace una reservación sin importar el número de caracteres ingresados.,
+RB-2,No se puede crear una reservación enviando el campo nombre vacio.,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+
+{
+    ""firstname"" : "" "",
+    ""lastname"" : "" "",
+    ""totalprice"" : 111,
+    ""depositpaid"" : true,
+    ""bookingdates"" : {
+        ""checkin"" : ""2018-01-01"",
+        ""checkout"" : ""2019-01-01""
+    },
+    ""additionalneeds"" : ""Breakfast""
+}
+- Enviar la solicitud",No se puede crear una reservación,,,200 se hace una reservación sin un nombre para una reserva.,
+RB-3,,,,,,,,,
+RB-4,,,,,,,,,
+RB-5,,,,,,,,,
+RB-6,,,,,,,,,
+RB-7,Se puede obtener información de la reserva filtrando por check-in/check-out,"- Endpoint de la API debe estar activo y disponible.
+- Deben existir reservas en el sistema para las fechas proporcionadas.",5,"- Seleccionar el método GET
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+- Agregar los parametros checkin con valor 2014-03-13
+- Agregar los parametros checkout con valor 2014-05-21
+- Enviar la solicitud",200,,,"Lanza código de respuesta 200, sin la información de la reservación.",
