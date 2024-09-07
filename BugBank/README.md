@@ -72,10 +72,9 @@ Se valida la interfaz, y a pesar que se encuentra en idioma portuges, y no conta
 Permite realizar una transferencia solo con el valor a transferir, es critico ya que realiza transferencia sin número de cuenta y digito de verificación
 Al crear dos cuentas para interactuar las transferencias, no permite realizar la transferencia a pesar de que la cuenta esta activa y el número de cuenta digital correspondiente
 
-  
 - **Sección pagos**
 No realizamos pruebas exploratorias o validación de esta sección ya que se encuentra en desarollo
-- 
+  
 - **Sección extractos**
 En esta sección no presenta fallas o errores criticos, nuestra la creación de la cuenta y los movimientos realizados de la aplicación
 
