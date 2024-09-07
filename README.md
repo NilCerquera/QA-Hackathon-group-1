@@ -1,4 +1,4 @@
-## QA-Hackathon-Grupo1
+## QA-Hackathon-Grupo1 💻
 
 Este proyecto tiene como objetivo interactuar y validar 3 aplicaciones (BugBank- Fake API & Restful Booker) con un enfoque principal en la búsqueda de fallos críticos relacionados con la validación de campos y el correcto funcionamiento de la información recibida de los requisitos de las aplicaciones.
 
