@@ -36,26 +36,49 @@ luego de ejecutar las pruebas correspondientes y validar el comportamiento de la
 **Formulario Registro usuario**
 
 - **Campo email**
+La unica restricción que permite es que el correo debe contar con el caracter @, de resto permite crear correos con cualquier parametro incluso sin dominio (gmail.com. hotmail.com etc)
+
 - **Campo nombre**
+No tiene establecido los parametros, lo que permite nombres con números, caracteres especiales y nombres en otro idioma
+
 - **Campo contraseña**
+No tiene establecido los parametros, lo que permite contraseñas con números, caracteres especiales y nombres en otro idioma 
+  
 - **Campo confirmar contraseña**
+No presenta fallas graves, a pesar de que no cuenta con parametros establecidos, cumple la condicion de que debe ser similar a la contraseña
+  
 - **Selector crear cuenta con saldo**
+No presenta fallas al seleccionar sin saldo (registra cuenta con 0 reales) y al seleccionar con saldo (registra con 1.000 reales)
+
 - **Funcionalidad registro**
+Permite crear una cuenta con los mismos datos (email, nombre, contraseña y confirmación contraseña)
+Crea cuentas con solo dos digitos de la cuenta y el digito de verificación
 
 **Formulario iniciar sesión**
 - **Campo email**
+- No tiene establecido los parametros, lo que permite nombres con números, caracteres especiales y nombres en otro idioma
+
 - **Campo contraseña**
+- No tiene establecido los parametros, lo que permite contraseñas con números, caracteres especiales y nombres en otro idioma 
+  
 - **Funcionalidad Iniciar sesión**
+No presenta fallas al iniciar sesión, se requiere diligenciar los dos parametros (email y contraseña) y presenta buen funcionamiento de la aplicación en este sentido.
 
 - **Funcionalidad Aplicación cuando la sesión se encuentra activa con el usuario**
 
+Se valida la interfaz, y a pesar que se encuentra en idioma portuges, y no contamos con diseños de la aplicación, es útil y sencillo el funcionamiento para el usuario 
+
 - **Sección Transferencia**
-- 
+Permite realizar una transferencia solo con el valor a transferir, es critico ya que realiza transferencia sin número de cuenta y digito de verificación
+Al crear dos cuentas para interactuar las transferencias, no permite realizar la transferencia a pesar de que la cuenta esta activa y el número de cuenta digital correspondiente
+
+  
 - **Sección pagos**
 No realizamos pruebas exploratorias o validación de esta sección ya que se encuentra en desarollo
 - 
 - **Sección extractos**
-- 
+En esta sección no presenta fallas o errores criticos, nuestra la creación de la cuenta y los movimientos realizados de la aplicación
+
 - **Sección beneficios**
   No realizamos pruebas exploratorias o validación de esta sección ya que se encuentra en desarollo
 
