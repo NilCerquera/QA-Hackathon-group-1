@@ -31,4 +31,32 @@ Este proyecto fue desarrollado por un equipo de QA Engineers comprometidos con l
 
 ## Fallas criticas de la aplicación**
 
+luego de ejecutar las pruebas correspondientes y validar el comportamiento de la aplicación **BugBank**, encontramos las siguientes novedades de la aplicación
 
+**Formulario Registro usuario**
+
+- **Campo email**
+- **Campo nombre**
+- **Campo contraseña**
+- **Campo confirmar contraseña**
+- **Selector crear cuenta con saldo**
+- **Funcionalidad registro**
+
+**Formulario iniciar sesión**
+- **Campo email**
+- **Campo contraseña**
+- **Funcionalidad Iniciar sesión**
+
+- **Funcionalidad Aplicación cuando la sesión se encuentra activa con el usuario**
+
+- **Sección Transferencia**
+- 
+- **Sección pagos**
+No realizamos pruebas exploratorias o validación de esta sección ya que se encuentra en desarollo
+- 
+- **Sección extractos**
+- 
+- **Sección beneficios**
+  No realizamos pruebas exploratorias o validación de esta sección ya que se encuentra en desarollo
+
+  
