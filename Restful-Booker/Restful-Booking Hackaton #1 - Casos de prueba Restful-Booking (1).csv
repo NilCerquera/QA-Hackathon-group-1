@@ -1,0 +1,108 @@
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Captura de pantalla (si es necesario),Resultado Actual,Enlace al informe de errores
+RB-6,No se puede crear una reservación enviando el campo nombre vacio.,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : "" "", ""lastname"" : "" "", ""totalprice"" : 111, ""depositpaid"" : true, ""bookingdates"" : {  ""checkin"" : ""2018-01-01"", ""checkout"" : ""2019-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",No se puede crear una reservación,1.0.0,,200 se hace una reservación sin un nombre para una reserva.,RB-6
+RB-7,No se puieden hacer recervaciones con fechas posteriores al checkout.,"- El endpoint de la API debe estar activo y disponible.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Configurar una herramienta de prueba para enviar la solicitud POST a la API.
+- Confirmar la expectativa de rechazo de la solicitud con fechas incorrectas.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : ""Jim"", ""lastname"" : ""Brown"", ""totalprice"" : 111, ""depositpaid"" : true,m""bookingdates"" : {  ""checkin"" : ""2018-01-01"",  ""checkout"" : ""2017-01-01"" }, ""additionalneeds"" : ""Breakfast""}
+- Enviar la solicitud",No se puede crear una reservación,1.0.0,,200 se crea una reservación con una fecha posterior de checkin ,RB-7
+RB-8,Se puede obtener información de la reserva filtrando por check-in/check-out,"- Endpoint de la API debe estar activo y disponible.
+- Deben existir reservas en el sistema para las fechas proporcionadas.",5,"- Seleccionar el método GET
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+- Agregar los parametros checkin con valor 2014-03-13
+- Agregar los parametros checkout con valor 2014-05-21
+- Enviar la solicitud",200 OK,1.0.0,,"Lanza código de respuesta 200, sin la información de la reservación.",RB-8
+RB-9,Al solicitar un token con un usuario incorrecto debería lanzar error,"El endpoint de la API está activo y disponible.
+El cliente debe estar configurado para enviar solicitudes al endpoint correspondiente.",5,"- Seleccionar el método POST.
+- Establecer la URL del endpoint:https://restful-booker.herokuapp.com/auth
+- Colocar los parametros  Content-Type con value application/json
+- En el cuerpo de la solicitud, agregar el siguiente JSON con un campo de credenciales vacío:
+{ ""username"": "" "",  ""password"": "" "" }
+- Enviar la solicitud.","400: Bad request +  {""reason"": ""Bad credentials""}",1.0.0,,200 OK + token,RB-9
+RB-10,La  información de la reserva filtrando por check-in/check-out es correcta,"- Endpoint de la API debe estar activo y disponible.
+- Deben existir reservas en el sistema para las fechas proporcionadas.",5,"- Seleccionar el método GET
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+- Agregar los parametros checkin con valor 2014-03-13
+- Agregar los parametros checkout con valor 2014-05-31
+- Enviar la solicitud",200 OK,1.0.0,,200 OK pero los datos arrojados no contienen la fechas correctas.,RB-10
+RB-11,Se puede hacer una reserva sin pago,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : "" "", ""lastname"" : "" "", ""totalprice"" : 111, ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""2018-01-01"", ""checkout"" : ""2019-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-11
+RB-12,Se puede crear una reserva agregando costos con caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : "" "", ""lastname"" : "" "", ""totalprice"" : ""precio"", ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""2018-01-01"", ""checkout"" : ""2019-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-12
+RB-13,Se puede crear una reserva agregando fecha checkin con caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : "" "", ""lastname"" : "" "", ""totalprice"" : ""precio"", ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""202$-01-01"", ""checkout"" : ""2019-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-13
+RB-14,Se puede crear una reserva agregando fecha checkout con caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : "" "", ""lastname"" : "" "", ""totalprice"" : ""precio"", ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""2024-01-01"", ""checkout"" : ""202$-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-14
+RB-15,Se puede crear una reserva agregando el nombre con caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : ""##$%&/!"" "", ""lastname"" : ""Brown"", ""totalprice"" :111, ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""2024-01-01"", ""checkout"" : ""2025-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-15
+RB-16,Se puede crear una reserva agregando el apellido con caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{ ""firstname"" : ""JIM"", ""lastname"" : ""##$%&/!"", ""totalprice"" : 111, ""depositpaid"" : false, ""bookingdates"" : {  ""checkin"" : ""2024-01-01"", ""checkout"" : ""2025-01-01"" },
+    ""additionalneeds"" : ""Breakfasts}
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-16
+RB-17,Se puede crear una reserva agregando en adicionales caracteres no validos,"- El endpoint de la API debe estar activo y disponible.
+- Confirmar si existen restricciones sobre la longitud del campo firstname.
+- El cuerpo de la solicitud debe estar correctamente formado en formato JSON.
+- Establecer la expectativa sobre la respuesta de la API ante una solicitud con demasiados caracteres.",4,"- Seleccionar el método POST
+- Colocar el URL https://restful-booker.herokuapp.com/booking
+-Agregar en el Body de la solicitud: 
+{
+    ""firstname"": ""Jim"",
+    ""lastname"": ""Brown"",
+    ""totalprice"": 111,
+    ""depositpaid"": true,
+    ""bookingdates"": {
+        ""checkin"": ""2024-01-01"",
+        ""checkout"": ""2025-01-01""
+    },
+    ""additionalneeds"": ""なことだった""
+- Enviar la solicitud",400: Bad request,1.0.0,,200 OK,RB-17
