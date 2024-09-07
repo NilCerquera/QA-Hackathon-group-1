@@ -12,17 +12,6 @@ Xmind para la creación de mapas mentales que ayudaron a la estructuración de l
 Objetivo del Proyecto
 El objetivo principal fue interactuar con la plataforma de reservas de hotel, buscando activamente fallos críticos en la API, evaluando los campos de validación y el correcto comportamiento de los endpoints. Nos enfocamos en simular diferentes escenarios de uso para comprobar la robustez de la API, tales como la gestión de reservas y la autenticación.
 
-Instalación y Ejecución
-Clona el repositorio:
-
-bash
-
-git clone [https://github.com/tuusuario/prueba-exploratoria-restful-booker](https://github.com/NilCerquera/QA-Hackathon-group-1).git
-Navega al directorio del proyecto:
-
-bash
-
-cd prueba-exploratoria-restful-booker
 
 Importa la colección de pruebas de Postman incluida en el repositorio para empezar a realizar las solicitudes a la API.
 
